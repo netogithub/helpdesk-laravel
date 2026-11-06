@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ticket extends Model
 {
+    use HasFactory;
+    
     protected $fillable = [
         'titulo', 'descripcion', 'estado', 'prioridad',
         'categoria_id', 'solicitante_id', 'tecnico_id', 'cerrado_en',
