@@ -2,6 +2,10 @@
 
 Sistema de tickets e incidencias para soporte técnico interno, construido con Laravel y SQL Server. Proyecto de práctica enfocado en CRUD, modelado relacional y API REST.
 
+## Capturas
+
+![Listado de tickets](docs/tickets-index.png)
+
 ## Tecnologías
 
 - PHP 8.4 y Laravel 12
@@ -14,6 +18,9 @@ Sistema de tickets e incidencias para soporte técnico interno, construido con L
 - [x] Fase 0: entorno y conexión a SQL Server
 - [x] Fase 1: base de datos y modelos
 - [ ] Fase 2: CRUD de tickets
+  - [x] Listado y detalle
+  - [ ] Crear y editar con validación
+  - [ ] Flujo de estados, asignación y comentarios
 - [ ] Fase 3: autenticación y roles
 - [ ] Fase 4: reportes con SQL Server
 - [ ] Fase 5: API REST
