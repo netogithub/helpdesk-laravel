@@ -40,4 +40,26 @@ class Ticket extends Model
     {
         return $this->hasMany(HistorialEstado::class);
     }
+
+    public function getEstadoColorAttribute(): string
+    {
+        return match ($this->estado) {
+            'abierto' => 'primary',
+            'en_proceso' => 'warning',
+            'resuelto' => 'success',
+            'cerrado' => 'secondary',
+            default => 'light',
+        };
+    }
+    
+    public function getPrioridadColorAttribute(): string
+    {
+        return match ($this->prioridad) {
+            'baja' => 'secondary',
+            'media' => 'info',
+            'alta' => 'warning',
+            'urgente' => 'danger',
+            default => 'light',
+        };
+    }
 }
