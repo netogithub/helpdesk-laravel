@@ -3,7 +3,10 @@
 @section('title', 'Tickets')
 
 @section('content')
-    <h1 class="h3 mb-3">Tickets</h1>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h3 mb-0">Tickets</h1>
+        <a href="{{ route('tickets.create') }}" class="btn btn-primary">Nuevo ticket</a>
+    </div>
 
     <div class="table-responsive bg-white shadow-sm rounded">
         <table class="table table-hover align-middle mb-0">

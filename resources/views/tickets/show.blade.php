@@ -4,6 +4,7 @@
 
 @section('content')
     <a href="{{ route('tickets.index') }}" class="btn btn-sm btn-outline-secondary mb-3">&larr; Volver</a>
+    <a href="{{ route('tickets.edit', $ticket) }}" class="btn btn-sm btn-outline-primary mb-3">Editar</a>
 
     <div class="card shadow-sm mb-4">
         <div class="card-body">

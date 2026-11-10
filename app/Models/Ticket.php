@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Ticket extends Model
 {
     use HasFactory;
+
+    public const PRIORIDADES = ['baja', 'media', 'alta', 'urgente'];
+    public const ESTADOS = ['abierto', 'en_proceso', 'resuelto', 'cerrado'];
     
     protected $fillable = [
         'titulo', 'descripcion', 'estado', 'prioridad',
@@ -51,7 +54,7 @@ class Ticket extends Model
             default => 'light',
         };
     }
-    
+
     public function getPrioridadColorAttribute(): string
     {
         return match ($this->prioridad) {

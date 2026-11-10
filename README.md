@@ -19,7 +19,7 @@ Sistema de tickets e incidencias para soporte técnico interno, construido con L
 - [x] Fase 1: base de datos y modelos
 - [ ] Fase 2: CRUD de tickets
   - [x] Listado y detalle
-  - [ ] Crear y editar con validación
+  - [x] Crear y editar con validación
   - [ ] Flujo de estados, asignación y comentarios
 - [ ] Fase 3: autenticación y roles
 - [ ] Fase 4: reportes con SQL Server

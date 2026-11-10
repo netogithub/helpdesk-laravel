@@ -14,7 +14,14 @@
     </nav>
 
     <main class="container pb-5">
+        @if (session('exito'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('exito') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        @endif
         @yield('content')
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
