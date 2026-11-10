@@ -11,6 +11,12 @@ class Ticket extends Model
 
     public const PRIORIDADES = ['baja', 'media', 'alta', 'urgente'];
     public const ESTADOS = ['abierto', 'en_proceso', 'resuelto', 'cerrado'];
+    public const TRANSICIONES = [
+        'abierto' => ['en_proceso'],
+        'en_proceso' => ['resuelto'],
+        'resuelto' => ['en_proceso', 'cerrado'],
+        'cerrado' => [],
+    ];
     
     protected $fillable = [
         'titulo', 'descripcion', 'estado', 'prioridad',
@@ -64,5 +70,10 @@ class Ticket extends Model
             'urgente' => 'danger',
             default => 'light',
         };
+    }
+
+    public function transicionesPermitidas(): array
+    {
+        return self::TRANSICIONES[$this->estado] ?? [];
     }
 }
